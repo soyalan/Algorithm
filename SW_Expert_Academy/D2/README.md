@@ -4,13 +4,11 @@
 
 ## D2
 
-
+[D2 문제 주소](https://swexpertacademy.com/main/code/problem/problemList.do?problemLevel=2&problemTitle=&orderBy=FIRST_REG_DATETIME&select-1=&pageSize=10&pageIndex=1)
 
 
 
 ### 1204 최빈수 구하기
-
-[문제주소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh&categoryId=AV13zo1KAAACFAYh&categoryType=CODE)
 
 > counting sort와 비슷한 방식
 

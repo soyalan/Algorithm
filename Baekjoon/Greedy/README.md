@@ -14,13 +14,11 @@
 
 
 
-
+[Greedy 문제 주소]([https://www.acmicpc.net/problem/tag/%EA%B7%B8%EB%A6%AC%EB%94%94%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98](https://www.acmicpc.net/problem/tag/그리디 알고리즘))
 
 
 
 ### 11399 ATM
-
-[문제 주소](https://www.acmicpc.net/problem/11399)
 
 > 정렬을 이용해 해결
 
@@ -28,15 +26,11 @@
 
 ### 11047 동전 0
 
-[문제 주소](https://www.acmicpc.net/problem/11047)
-
 > 큰 동전부터 차례차례 계산
 
 
 
 ### 1931 회의실배정
-
-[문제 주소](https://www.acmicpc.net/problem/1931)
 
 > 끝나는 시간 순서대로 정렬 후, 계속해서 가장 먼저 끝나는 것을 선택
 >
@@ -48,16 +42,19 @@
 
 ### 5585 거스름돈
 
-[문제 주소](https://www.acmicpc.net/problem/5585)
-
 > 동전 문제와 마찬가지로 큰 동전부터 계산
 
 
 
 ### 2217 로프
 
-[문제 주소](https://www.acmicpc.net/problem/2217)
-
 >정렬을 이용해서 계산
 >
 >하중이 큰 로프부터 계산하여 최대값을 찾음
+
+
+
+### 10610 30
+
+> 3의 배수 판별하는 방법과 동일
+
