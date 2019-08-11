@@ -1,40 +1,37 @@
 #include <stdio.h>
 #include <iostream>
 #include <algorithm>
+#include <string.h>
 
 using namespace std;
 
 int main() {
 
-	long long int number;
-	scanf("%lld", &number);
-	int arr[10001];
-	int cnt = 0;
+	char p[100001];
+	scanf("%s", p);
+	int arr[100001];
+	int cnt = strlen(p);
 	bool zero = false;
-	while (number != 0) {
-		arr[cnt++] = number % 10;
-		number /= 10;
-		if (arr[cnt - 1] == 0)
+	
+	for (int i = 0; i < cnt; i++) {
+		arr[i] = (int)((p[i]) - '0');
+		if (arr[i] == 0)
 			zero = true;
 	}
-
-	for (int i = 0; i < cnt; i++) {
-		printf("%d ", arr[i]);
-	}
-	printf("\n\n");
 
 	if (zero) {
 		int sum = 0;
 		for (int i = 0; i < cnt; i++) {
 			sum += arr[i];
 		}
-		if (sum % 3 == 0) {
-			sort(arr, arr + cnt);
-			long long int result = 0;
-			while (cnt != 0) {
-				result = (result * 10) + arr[cnt-- - 1];
+		if (sum == 0)
+			printf("-1\n");
+		else if (sum % 3 == 0) {
+			sort(p, p + cnt);
+			for (int i = 0; i < cnt; i++) {
+				printf("%d", p[cnt - i - 1] - '0');
 			}
-			printf("%lld\n", result);
+			printf("\n");
 		}
 		else
 			printf("-1\n");
