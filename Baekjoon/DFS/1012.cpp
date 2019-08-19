@@ -5,8 +5,8 @@
 using namespace std;
 
 int width, height;
-int arr[50][50];
-bool visitied[50][50];
+int arr[51][51];
+bool visitied[51][51];
 int cnt;
 
 void dfs(int y, int x) {
@@ -30,7 +30,6 @@ int main() {
 	for (int k = 0; k < n; k++) {
 		int number = 0;
 		cin >> width >> height >> number;
-		cout << "init. " << width << " " << height << " " << number << endl;
 		// ÃÊ±âÈ­
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
@@ -47,21 +46,15 @@ int main() {
 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
-				printf("%d ", arr[i][j]);
-			}
-			printf("\n");
-		}
-
-		for (int i = 0; i < height; i++) {
-			for (int j = 0; j < width; j++) {
 				if (!visitied[i][j]) {
+					if (arr[i][j] == 1)
+						cnt++;
 					dfs(i, j);
-					cnt++;
 				}
 			}
 		}
 		 
-		cout << "----- " << cnt << endl;
+		cout << cnt << endl;
 
 	}
 
