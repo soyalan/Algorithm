@@ -73,6 +73,16 @@ void winter() {
 	}
 }
 
+void print(int y) {
+	printf("========== %d ==========\n", y);
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			printf("%d ", tree[i][j].size());
+		}
+		printf("\n");
+	}
+}
+
 int main() {
 	cin >> N >> M >> K;
 	for (int i = 0; i < N; i++) {
@@ -89,12 +99,13 @@ int main() {
 		cin >> y >> x >> z;
 		tree[y - 1][x - 1].push(z);
 	}
-
-	for (int year = 0; year < K; year++) {
+	print(0);
+	for (int year = 1; year <= K; year++) {
 		spring();
 		summer();
 		fall();
 		winter();
+		print(year);
 	}
 	int cnt = 0;
 	for (int i = 0; i < N; i++) {
