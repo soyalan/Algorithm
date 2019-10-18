@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
-#include <queue>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -9,29 +10,27 @@ int map[11][11];
 int rice[11][11];
 int wrice[11][11];
 int add[11][11];
-priority_queue<int> tree[11][11];
+vector<int> tree[11][11];
 
 void spring() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
-			queue<int> q;
 			int siz = tree[i][j].size();
-			for (int s = 0; s < siz; s++) {
-				int cur = tree[i][j].top();
-				tree[i][j].pop();
+			if(siz > 0 ) sort(tree[i][j].begin(), tree[i][j].end());
+			int cnt = 0;
+			for (int s = 0; s < siz - cnt; s++) {
+				int cur = tree[i][j][s];
 				if (map[i][j] >= cur) {
 					map[i][j] -= cur;
-					q.push(cur + 1);
+					tree[i][j][s] = cur + 1;
+					if (tree[i][j][s] % 5 == 0) add[i][j]++;
 				}
 				else {
+					tree[i][j].erase(tree[i][j].begin() + s);
 					rice[i][j] += (cur / 2);
+					s--;
+					cnt++;
 				}
-			}
-			siz = q.size();
-			for (int s = 0; s < siz; s++) {
-				tree[i][j].push(q.front());
-				if (q.front() % 5 == 0) add[i][j]++;
-				q.pop();
 			}
 		}
 	}
@@ -56,7 +55,7 @@ void fall() {
 					int y = i + dy[d];
 					int x = j + dx[d];
 					if (x >= 0 && x < N && y >= 0 && y < N) {
-						tree[y][x].push(1);
+						tree[y][x].push_back(1);
 					}
 				}
 			}
@@ -73,22 +72,12 @@ void winter() {
 	}
 }
 
-void print(int y) {
-	printf("========== %d ==========\n", y);
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < N; j++) {
-			printf("%d ", tree[i][j].size());
-		}
-		printf("\n");
-	}
-}
-
 int main() {
 	cin >> N >> M >> K;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			int s;
-			cin >> s;
+			scanf(" %d", &s);
 			map[i][j] = 5;
 			wrice[i][j] = s;
 		}
@@ -96,16 +85,14 @@ int main() {
 
 	for (int i = 0; i < M; i++) {
 		int y, x, z;
-		cin >> y >> x >> z;
-		tree[y - 1][x - 1].push(z);
+		scanf(" %d %d %d", &y, &x, &z);
+		tree[y - 1][x - 1].push_back(z);
 	}
-	print(0);
 	for (int year = 1; year <= K; year++) {
 		spring();
 		summer();
 		fall();
 		winter();
-		print(year);
 	}
 	int cnt = 0;
 	for (int i = 0; i < N; i++) {
