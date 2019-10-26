@@ -1,4 +1,3 @@
-/*
 #include <stdio.h>
 #include <iostream>
 #include <algorithm>
@@ -22,10 +21,9 @@ public:
 int main() {
 	int N, K;
 	cin >> N >> K;
-	//j arr[300001];
-	//int brr[300001];
-	j arr[101];
-	int brr[101];
+	j arr[300001];
+	int brr[300001];
+
 
 	for (int i = 0; i < N; i++) {
 		int a, b;
@@ -37,12 +35,13 @@ int main() {
 		scanf(" %d", &a);
 		brr[i] = a;
 	}
-	
+
 	sort(arr, arr + N);
 	sort(brr, brr + K);
 
 	priority_queue<int> q;
-	int cnt = 0, res = 0;
+	int cnt = 0;
+	long long res = 0;
 	for (int i = 0; i < K; i++) {
 		if (cnt < N) {
 			while (arr[cnt].m <= brr[i]) {
@@ -53,12 +52,12 @@ int main() {
 				}
 			}
 		}
+		if (q.empty()) continue;
 		res += q.top();
 		q.pop();
 	}
 
-	printf("%d\n", res);
+	printf("%lld\n", res);
 
 	return 0;
 }
-*/

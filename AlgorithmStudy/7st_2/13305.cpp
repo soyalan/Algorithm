@@ -1,4 +1,3 @@
-/*
 #include <stdio.h>
 #include <iostream>
 
@@ -17,14 +16,13 @@ int main() {
 	}
 
 	long long res = 0;
-	int cnt = 1000000000;
+	long long cnt = 1000000000;
 
 	for (int i = 0; i < N - 1; i++) {
 		if (cnt > dis[i]) {
 			cnt = dis[i];
 		}
-		long long temp = cnt * arr[i + 1];
-		res += temp;
+		res += (cnt * arr[i + 1]);
 	}
 
 	printf("%lld\n", res);
@@ -32,4 +30,3 @@ int main() {
 
 	return 0;
 }
-*/

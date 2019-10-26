@@ -18,7 +18,7 @@
 
 #### [1202 보석 도둑](https://github.com/soyalan/Algorithm/blob/master/AlgorithmStudy/7st_2/1202.cpp)
 
-> 테스트 케이스는 나오는데...
+> 결과 값은 long long으로...
 
 
 
@@ -30,7 +30,7 @@
 
 #### [13305 주유소](https://github.com/soyalan/Algorithm/blob/master/AlgorithmStudy/7st_2/13305.cpp)
 
-> 테스트 케이스는 나오는데...
+> long long으로 형변환 해줄 것
 
 
 
