@@ -10,7 +10,6 @@ bool visited[301][301];
 int dy[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 int dx[] = { 0, -1, -1, -1, 0, 1, 1, 1 };
 
-
 void bfs(int sy, int sx) {
 	queue<pair<int, int> > q;
 	q.push({ sy, sx });
@@ -58,13 +57,29 @@ int main() {
 		int cnt = 0;
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
+				if (map[i][j] == -2) continue;
+				int boom = 0;
+				for (int d = 0; d < 8; d++) {
+					int ny = i + dy[d];
+					int nx = j + dx[d];
+					if (nx >= 0 && nx < N && ny >= 0 && ny < N) {
+						if (map[ny][nx] == -2) boom++;
+					}
+				}
+				if (boom == 0 && !visited[i][j]) {
+					bfs(i, j);
+					cnt++;
+				}
+			}
+		}
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
 				if (map[i][j] == -1) {
 					bfs(i, j);
 					cnt++;
 				}
 			}
 		}
-
 		printf("#%d %d\n", t, cnt);
 	}
 
