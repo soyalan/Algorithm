@@ -18,5 +18,14 @@
     <ClCompile Include="완주하지 못한 선수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="모의고사.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="K번째 수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="문자열압축.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
