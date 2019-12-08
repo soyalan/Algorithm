@@ -10,13 +10,16 @@ int main() {
 		int n;
 		scanf(" %d", &n);
 		if (temp > n) {
-
+			as = false;
 		}
 		if (temp < n) {
-
+			de = false;
 		}
 		temp = n;
 	}
+	if (as) printf("ascending\n");
+	else if (de) printf("descending\n");
+	else printf("mixed\n");
 	
 	return 0;
 }
