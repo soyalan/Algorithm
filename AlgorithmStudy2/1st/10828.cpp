@@ -19,6 +19,8 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
+
+
 	int N, cnt = -1;
 	cin >> N;
 	int* stack = (int*)malloc(sizeof(int) * stackSize);
