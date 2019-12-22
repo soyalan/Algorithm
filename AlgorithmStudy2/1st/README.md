@@ -105,8 +105,10 @@
 
 #### [5430 AC](https://github.com/soyalan/Algorithm/blob/master/AlgorithmStudy/2st/5430.cpp)
 
-> 
+> 풀었던 문제
 
 
 
 #### 9012 괄호
+
+> Stack 구현
