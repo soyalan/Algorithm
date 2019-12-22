@@ -41,7 +41,7 @@
 
 #### 1406 에디터
 
-> Linked List 사용
+> Linked List 구현
 
 
 
@@ -59,13 +59,13 @@
 
 #### 1158 조세퍼스 문제
 
-> Linked List 사용
+> Linked List 구현
 
 
 
 #### 5397 키로거
 
-> Linked List 사용
+> Linked List 구현
 
 
 
@@ -76,3 +76,37 @@
 #### 10828 스택
 
 > Stack 구현
+
+
+
+#### 10845 큐
+
+> Queue 구현
+
+
+
+#### 10866
+
+> STL deque 사용
+
+
+
+#### 1874 스택 수열
+
+> STL vector 사용
+
+
+
+#### 1021 회전하는 큐
+
+> Linked List 구현
+
+
+
+#### [5430 AC](https://github.com/soyalan/Algorithm/blob/master/AlgorithmStudy/2st/5430.cpp)
+
+> 
+
+
+
+#### 9012 괄호
