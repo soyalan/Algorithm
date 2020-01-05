@@ -111,3 +111,8 @@
 #### 2631 줄세우기
 
 > 가장 긴 증가하는 수열 문제
+>
+> Longest Increasing Subsquence
+
+
+
